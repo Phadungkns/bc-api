@@ -1,0 +1,47 @@
+plugins:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'config/application.rb'
+    - 'Gemfile*'
+    - 'app/views/**/*.jbuilder'
+    - 'bin/*'
+    - 'db/seeds.rb'
+  NewCops: disable
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 10
+  Exclude:
+    - 'app/lib/*'
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 15
+  Exclude:
+    - 'app/lib/*'
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
